@@ -90,7 +90,7 @@ class PhiTaxonomyModel(nn.Module):
 
         hidden_states = outputs.hidden_states[-1]
 
-        # Using last non-padded token (equivalent to CLS/pooled output for causal LMs), no CLS token, initialling made mistake of taking last token irrespective of padding, so faced issues with training
+        # Using last non-padded token (equivalent to CLS/pooled output for causal LMs), no CLS token, initially made the mistake of taking last token irrespective of padding, so faced issues with training
         sequence_lengths = attention_mask.sum(dim=1) - 1
         batch_size = input_ids.shape[0]
         pooled_output = hidden_states[torch.arange(batch_size, device=hidden_states.device), sequence_lengths]
