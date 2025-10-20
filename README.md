@@ -1,1 +1,1 @@
-# Taxonomy-expansion-with-Taxonomy-Paths
+# Qwen-Tax: Taxonomy expansion with Taxonomy Paths
